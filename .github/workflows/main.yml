@@ -48,5 +48,5 @@ jobs:
           context: ./
           file: ./DockerCICDExample/Dockerfile
           push: true
-          tags: twinkalparmar23/test:latest
+          tags: 23397/test:latest
   
