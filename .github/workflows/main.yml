@@ -49,4 +49,11 @@ jobs:
           file: ./DockerCICDExample/Dockerfile
           push: true
           tags: 23397/test:latest
-  
+          
+    - name: Run shell script in linux 
+      uses: fifsky/ssh-action@master
+      with:
+          command: ./dockerScript.sh
+          host: ${{ secrets.SSH_HOST }}
+          user: ec2-user
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
